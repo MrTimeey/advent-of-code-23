@@ -1,2 +1,3 @@
-# advent_of_code_23
-Advent of Code 23
+# Advent of Code 23
+
+My solutions for https://adventofcode.com/2023
