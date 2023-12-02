@@ -1,11 +1,11 @@
-import {type Cubes} from './src/types'
-import {sumAllPossibleGameIds, sumAllPowerOfMinimumSets} from './src/gameService'
-import {readFileSync} from 'fs';
+import { type Cubes } from './src/types'
+import { sumAllPossibleGameIds, sumAllPowerOfMinimumSets } from './src/gameService'
+import { readFileSync } from 'fs'
 
-const readFileLines = (filename: string) =>
-    readFileSync(filename).toString('utf-8').split('\n');
+const readFileLines = (filename: string): string[] =>
+  readFileSync(filename).toString('utf-8').split('\n')
 
-const inputLines = readFileLines('./src/input.txt');
+const inputLines = readFileLines('./src/input.txt')
 
 const maxDefinition: Cubes = {
   red: 12,
@@ -14,5 +14,5 @@ const maxDefinition: Cubes = {
 }
 
 console.log('02.12.2023')
-console.log('Sum of all possible game ids',sumAllPossibleGameIds(inputLines, maxDefinition))
-console.log('Sum of all powers of the minimum sets',sumAllPowerOfMinimumSets(inputLines))
+console.log('Sum of all possible game ids', sumAllPossibleGameIds(inputLines, maxDefinition))
+console.log('Sum of all powers of the minimum sets', sumAllPowerOfMinimumSets(inputLines))

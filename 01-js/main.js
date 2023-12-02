@@ -1,5 +1,10 @@
-import { inputData } from './src/inputData.js'
 import { getCombinedNumber } from './src/numberService.js'
+import { readFileSync } from 'fs'
+
+const readFileLines = (filename) =>
+  readFileSync(filename).toString('utf-8').split('\n')
+
+const inputData = readFileLines('./src/input.txt')
 
 const result = inputData
   .map(n => +getCombinedNumber(n))
