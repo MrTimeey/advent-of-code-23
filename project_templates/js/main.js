@@ -1,9 +1,9 @@
-import { inputData } from './src/inputData.js'
-import { getCombinedNumber } from './src/numberService.js'
+import { readFileSync } from 'fs'
 
-const result = inputData
-  .map(n => +getCombinedNumber(n))
-  .reduce((acc, val) => acc + val, 0)
+const readFileLines = (filename) =>
+    readFileSync(filename).toString('utf-8').split('\n')
 
-console.log('01.12.2023')
-console.log(`Result: ${result}`)
+const inputData = readFileLines('./src/input.txt')
+
+
+console.log('XX.12.2023')
