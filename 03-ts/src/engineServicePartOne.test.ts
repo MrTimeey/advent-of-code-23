@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { sumAllGears, sumAllPartNumbers } from './engineService'
+import { sumAllGears, sumAllPartNumbers } from './engineServicePartTwo'
 
 test('Sum of all part numbers', () => {
   const exampleInput = [
