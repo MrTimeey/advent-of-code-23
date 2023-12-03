@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const readFileLines = (filename: string) =>
+const readFileLines = (filename: string): string[] =>
     readFileSync(filename).toString('utf-8').split('\n');
 
 const inputLines = readFileLines('./src/input.txt');
