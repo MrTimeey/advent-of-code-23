@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs'
-import { sumAllGears, sumAllPartNumbers } from './src/engineService'
+import { sumAllPartNumbers } from './src/engineServicePartOne'
+import { sumAllGears } from './src/engineServicePartTwo'
 
 const readFileLines = (filename: string): string[] =>
   readFileSync(filename).toString('utf-8').split('\n')
