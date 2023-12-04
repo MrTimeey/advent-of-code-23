@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
 import { getCombinedNumber } from './numberService.js'
+import { getNewCombinedNumber } from './refactoredNumberService.js'
 
 test('Input "1abc2" converts to 12', () => {
   expect(getCombinedNumber('1abc2')).toBe(12)
@@ -50,4 +51,20 @@ test('Input "eighthree" converts to 83', () => {
 
 test('Input "sevenine" converts to 79', () => {
   expect(getCombinedNumber('sevenine')).toBe(79)
+})
+
+test('Refactored method', () => {
+  expect(getNewCombinedNumber('1abc2')).toBe(12)
+  expect(getNewCombinedNumber('pqr3stu8vwx')).toBe(38)
+  expect(getNewCombinedNumber('a1b2c3d4e5f')).toBe(15)
+  expect(getNewCombinedNumber('treb7uchet')).toBe(77)
+  expect(getNewCombinedNumber('xtwone3four')).toBe(24)
+  expect(getNewCombinedNumber('two1nine')).toBe(29)
+  expect(getNewCombinedNumber('abcone2threexyz')).toBe(13)
+  expect(getNewCombinedNumber('zoneight234')).toBe(14)
+  expect(getNewCombinedNumber('4nineeightseven2')).toBe(42)
+  expect(getNewCombinedNumber('7pqrstsixteen')).toBe(76)
+  expect(getNewCombinedNumber('eightwothree')).toBe(83)
+  expect(getNewCombinedNumber('eighthree')).toBe(83)
+  expect(getNewCombinedNumber('sevenine')).toBe(79)
 })
