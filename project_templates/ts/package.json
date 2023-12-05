@@ -1,10 +1,11 @@
 {
-  "name": "second_door",
+  "name": "door_",
   "version": "1.0.0",
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "dev": "ts-node main.ts",
+    "dev": "nodemon main.ts",
+    "serve": "ts-node main.ts",
     "test": "vitest",
     "lint": "eslint **/*.ts",
     "lint:fix": "eslint --fix **/*.ts"
@@ -18,10 +19,9 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
-  },
-  "dependencies": {
-    "ts-node": "^10.9.1"
   }
 }
