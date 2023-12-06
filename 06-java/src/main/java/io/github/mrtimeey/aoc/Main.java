@@ -12,7 +12,9 @@ public class Main {
 
    public static void main(String[] args) {
       List<String> input = loadInput();
-      System.out.println("Hello World!" + input);
+      System.out.println("06.12.2023");
+      System.out.println("Multiply ways to win: " + RaceUtils.calculateWaysToWin(input));
+      System.out.println("Ways to win with one race: " + RaceUtils.calculateWins(input));
    }
 
    private static List<String> loadInput() {
