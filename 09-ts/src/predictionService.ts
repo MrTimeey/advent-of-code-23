@@ -29,18 +29,18 @@ const getPreviousNumber = (line: number[]): number => {
   return numbers[numbers.length - 1]
 }
 
-export const totalSumOfNextNumbers = (input: string[]): number => {
+const totalSum = (input: string[], numberMapping: (val: number[]) => number): number => {
   return input
     .filter(s => s !== undefined && s !== '')
     .map(i => i.split(' ').map(Number))
-    .map(s => getNextNumber(s))
+    .map(s => numberMapping(s))
     .reduce((acc, val) => acc + val, 0)
 }
 
+export const totalSumOfNextNumbers = (input: string[]): number => {
+  return totalSum(input, getNextNumber)
+}
+
 export const totalSumOfPreviousNumbers = (input: string[]): number => {
-  return input
-    .filter(s => s !== undefined && s !== '')
-    .map(i => i.split(' ').map(Number))
-    .map(s => getPreviousNumber(s))
-    .reduce((acc, val) => acc + val, 0)
+  return totalSum(input, getPreviousNumber)
 }
