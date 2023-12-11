@@ -15,7 +15,8 @@ public class Main {
    public static void main(String[] args) {
       List<String> input = loadInput();
       System.out.println("10.12.2023");
-      System.out.println("Part 1: " + MazeUtils.calculateFarthestPoint(input, "S"));
+      System.out.println("Part 1: " + MazeUtils.calculateFarthestPoint(input));
+      System.out.println("Part 2: " + MazeUtils.calculateTiles(input));
    }
 
    private static List<String> loadInput() {

@@ -10,11 +10,16 @@ import static io.github.mrtimeey.aoc.utils.CharacterUtils.EMPTY_CHARACTER;
 
 public class MazeUtils {
 
-   public static int calculateFarthestPoint(List<String> inputLines, String startingPoint) {
-      return getLoop(inputLines, startingPoint).size() / 2;
-   }
-   public static List<Position> getLoop(List<String> inputLines, String startingPoint) {
+   public static int calculateFarthestPoint(List<String> inputLines) {
       String[][] input = parseInput(inputLines);
+      return getLoop(input, "S").size() / 2;
+   }
+
+   public static int calculateTiles(List<String> inputLines) {
+      return 0;
+   }
+
+   public static List<Position> getLoop(String[][] input, String startingPoint) {
       Position startPosition = getStartPosition(input, startingPoint);
       Direction cameFrom = null;
       String lastChar = "";
