@@ -82,32 +82,3 @@ function calculatePossibleAppearances (input: string, condition: number[]): numb
   helper.set(helperKey, result)
   return result
 }
-
-/*
-export function count (input: string, condition: number[]): number {
-  if (input.length === 0) return condition.length === 0 ? 1 : 0
-
-  if (condition.length === 0) return input.includes('#') ? 0 : 1
-
-  const helperKey = `${input}${condition.join(',')}`
-  if (helper[helperKey]) return helper[helperKey]
-
-  let result = 0
-
-  if ('.?'.includes(input[0])) {
-    result += count(input.slice(1), [...condition])
-  }
-
-  if ('#?'.includes(input[0])) {
-    const longEnough = condition[0] <= input.length
-    const noDots = !input.slice(0, condition[0]).includes('.')
-    const endOfString = condition[0] === input.length
-    const followingCharIsNotBroken = input[condition[0]] !== '#'
-    if (longEnough && noDots && (endOfString || followingCharIsNotBroken)) {
-      result += count(input.slice(condition[0] + 1), [...condition.slice(1)])
-    }
-  }
-  helper[helperKey] = result
-  return result
-}
-*/
