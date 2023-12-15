@@ -6,13 +6,16 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
 
    public static void main(String[] args) {
       List<String> input = loadInput();
-      System.out.println("Hello World!" + input);
+      System.out.println("15.12.2023");
+      System.out.println("Part 1: " + HashUtils.hashValues(String.join("", input)));
+      System.out.println("Part 2: " + HashUtils.focusingPower(String.join("", input)));
    }
 
    private static List<String> loadInput() {
