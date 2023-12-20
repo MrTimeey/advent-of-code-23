@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs'
-import { part1, part2 } from './src/aService'
+import { part1, part2 } from './src/pulsePropagationService'
 
 const readFileLines = (filename: string): string[] =>
   readFileSync(filename).toString('utf-8').trimEnd().split('\n').map(line => line.trimEnd())
